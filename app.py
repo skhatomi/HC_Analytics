@@ -6,6 +6,13 @@ from streamlit_lottie import st_lottie
 from PIL import Image
 import base64
 
+st.set_page_config(
+     page_title="HC-Analytics",
+     page_icon=":bar_chart:",
+     layout="wide",
+     initial_sidebar_state="expanded",
+ )
+
 @st.cache(allow_output_mutation=True)
 def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
@@ -35,7 +42,7 @@ def set_bg_hack(main_bg):
          unsafe_allow_html=True
      )
 
-set_bg_hack('D:/bank-bni.jpg')
+set_bg_hack('D:/background1.jpg')
 
 #def load_lottieurl(url):
 #    r = requests.get(url)
@@ -47,14 +54,10 @@ set_bg_hack('D:/bank-bni.jpg')
 
 def main():
     #lottie_analytic = load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_dews3j6m.json")
-
-    image = Image.open('D:\BNI_Hactics_Vertical-removebg-preview.png')
-
-    st.image(image)
     
     container = st.container()
 
-    username = st.sidebar.text_input("User Name")
+    username = st.sidebar.text_input("Username")
     password = st.sidebar.text_input("Password", type = 'password')
 
     if st.sidebar.checkbox("Login"):
@@ -74,7 +77,10 @@ def main():
             st.sidebar.warning("Invalid username or password")
 
     try:
-        container.write("Welcome to HC Analytics")
+        container.write("")
+        image = Image.open('D:\BNI_Hactics_Horizontal-removebg-preview.png')
+
+        st.image(image)
         #st_lottie(lottie_analytic, height=300, key="analytic")
     except:
         pass
