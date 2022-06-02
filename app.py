@@ -8,7 +8,7 @@ import plotly.graph_objects as go
 import plotly.figure_factory as ff
 from plotly.graph_objs import Layout
 
-image = Image.open('D:\logo-bni.png')
+image = Image.open('HC_Analytics\image\logo-bni.png')
 
 st.set_page_config(
      page_title="BNI-HACTICS",
@@ -49,7 +49,7 @@ def set_bg_hack(main_bg):
          unsafe_allow_html=True
      )
 
-set_bg_hack('D:/background1.jpg')
+set_bg_hack('HC_Analytics\image\background1.jpg')
 
 #def load_lottieurl(url):
 #    r = requests.get(url)
@@ -75,7 +75,7 @@ if st.sidebar.checkbox("Login"):
         del container
         st.sidebar.success("Logged in as {}".format(username))
 
-        dfx = pd.read_excel('D:/data_train.xlsx', engine='openpyxl', index_col=0)
+        dfx = pd.read_excel('HC_Analytics\db\data_train.xlsx', engine='openpyxl', index_col=0)
 
         st.header('Data ODP saat ini')
         
@@ -138,7 +138,7 @@ if st.sidebar.checkbox("Login"):
 
             from sklearn.model_selection import train_test_split
 
-            df = pd.read_excel('D:/data_train_1.xlsx', engine='openpyxl', index_col=0)
+            df = pd.read_excel('HC_Analytics\db\data_train_1.xlsx', engine='openpyxl', index_col=0)
 
             X = df.drop(columns=["PERFORMANCE LEVEL"])
 
@@ -197,7 +197,7 @@ if st.sidebar.checkbox("Login"):
 
 try:
     container.write("")
-    image = Image.open('D:\BNI_Hactics_Horizontal-removebg-preview.png')
+    image = Image.open('HC_Analytics\image\BNI_Hactics_Horizontal-removebg-preview.png')
 
     st.image(image)
     #st_lottie(lottie_analytic, height=300, key="analytic")
