@@ -8,7 +8,7 @@ import plotly.graph_objects as go
 import plotly.figure_factory as ff
 from plotly.graph_objs import Layout
 
-image = Image.open('HC_Analytics\image\logo-bni.png', 'rb')
+image = Image.open('./image/logo-bni.png')
 
 st.set_page_config(
      page_title="BNI-HACTICS",
