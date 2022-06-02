@@ -75,7 +75,7 @@ if st.sidebar.checkbox("Login"):
         del container
         st.sidebar.success("Logged in as {}".format(username))
         
-        dfx = pd.read_excel('.db/data_train.xlsx', index_col=0)
+        dfx = pd.read_excel('.db/data_train.xlsx', 'rb', index_col=0)
 
         st.header('Data ODP saat ini')
         
