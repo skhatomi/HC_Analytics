@@ -49,7 +49,7 @@ def set_bg_hack(main_bg):
          unsafe_allow_html=True
      )
 
-set_bg_hack('HC_Analytics\image\background1.jpg', 'rb')
+set_bg_hack('./image/background1.jpg', 'rb')
 
 #def load_lottieurl(url):
 #    r = requests.get(url)
