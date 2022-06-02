@@ -75,7 +75,7 @@ if st.sidebar.checkbox("Login"):
         del container
         st.sidebar.success("Logged in as {}".format(username))
 
-        dfx = pd.read_excel('.db/data_train.xlsx', engine='openpyxl', index_col=0)
+        dfx = pd.read_excel('.db/data_train.xlsx', index_col=0)
 
         st.header('Data ODP saat ini')
         
@@ -128,7 +128,7 @@ if st.sidebar.checkbox("Login"):
 
         if uploaded_file is not None:
             try:
-                df_test = pd.read_excel(uploaded_file, engine='openpyxl', index_col=0)
+                df_test = pd.read_excel(uploaded_file, index_col=0)
                 df_rest = df_test
                 df_rest = df_rest.reset_index(drop = True)
             except:
@@ -138,7 +138,7 @@ if st.sidebar.checkbox("Login"):
 
             from sklearn.model_selection import train_test_split
 
-            df = pd.read_excel('.db/data_train_1.xlsx', engine='openpyxl', index_col=0)
+            df = pd.read_excel('.db/data_train_1.xlsx', index_col=0)
 
             X = df.drop(columns=["PERFORMANCE LEVEL"])
 
