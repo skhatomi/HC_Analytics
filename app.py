@@ -120,7 +120,7 @@ if st.sidebar.checkbox("Login"):
         #IPK
         st.write("Rata-rata IPK: ", str(round(sum(dfx["IPK"])/len(dfx), 2)))
 
-        st.write(":heavy_minus_sign:" * 52)
+        st.write(":heavy_minus_sign:" * 51)
         #upload
         st.header('Prediksi tingkat kinerja calon ODP')
         uploaded_file = st.file_uploader(label="Unggah file calon ODP disini", type=['xlsx'])
