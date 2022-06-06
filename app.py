@@ -92,10 +92,10 @@ if st.sidebar.button("Login"):
     #st.balloons()
 
     if username == 'user' and password == 'bni46':
-        _, _, col5 = st.columns([5, 5, 1])
+        '''_, _, col5 = st.columns([5, 5, 1])
         with col5:
             if st.button("Logout"):
-                st.write("tes")
+                st.write("tes")'''
 
         header("Talent Acquisition")
 
