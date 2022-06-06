@@ -1,3 +1,4 @@
+from copyreg import remove_extension
 import streamlit as st
 from PIL import Image
 import base64
@@ -8,7 +9,7 @@ import plotly.graph_objects as go
 import plotly.figure_factory as ff
 from plotly.graph_objs import Layout
 
-image = Image.open('./image/logo-bni.png')
+image = Image.open('D:/logo-bni.png', mode='r')
 
 st.set_page_config(
      page_title="BNI-HACTICS",
@@ -16,6 +17,15 @@ st.set_page_config(
      layout="wide",
      initial_sidebar_state="expanded",
  )
+
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
 @st.cache(allow_output_mutation=True)
 def get_base64_of_bin_file(bin_file):
@@ -49,7 +59,7 @@ def set_bg_hack(main_bg):
          unsafe_allow_html=True
      )
 
-set_bg_hack('./image/background1.jpg')
+set_bg_hack('D:/background1.jpg')
 
 #def load_lottieurl(url):
 #    r = requests.get(url)
@@ -66,16 +76,33 @@ container = st.container()
 username = st.sidebar.text_input("Username")
 password = st.sidebar.text_input("Password", type = 'password')
 
-if st.sidebar.checkbox("Login"):
+st.markdown("""
+<style>
+div.stButton > button:first-child {
+    background-color: #0099ff;
+    color:#ffffff;
+}
+div.stButton > button:hover {
+    background-color: #fc6608;
+    color:#FFFFFF;
+    }
+</style>""", unsafe_allow_html=True)
+
+if st.sidebar.button("Login"):
     #st.balloons()
 
     if username == 'user' and password == 'bni46':
+        _, _, col5 = st.columns([5, 5, 1])
+        with col5:
+            if st.button("Logout"):
+                st.write("tes")
+
         header("Talent Acquisition")
 
         del container
         st.sidebar.success("Logged in as {}".format(username))
-        
-        dfx = pd.read_excel('./db/data_train.xlsx', engine='openpyxl', index_col=0)
+
+        dfx = pd.read_excel('D:/data_train.xlsx', engine='openpyxl', index_col=0)
 
         st.header('Data ODP saat ini')
         
@@ -120,11 +147,10 @@ if st.sidebar.checkbox("Login"):
         #IPK
         st.write("Rata-rata IPK: ", str(round(sum(dfx["IPK"])/len(dfx), 2)))
 
-        st.write(":heavy_minus_sign:" * 51)
+        st.markdown("""---""")
         #upload
         st.header('Prediksi tingkat kinerja calon ODP')
         uploaded_file = st.file_uploader(label="Unggah file calon ODP disini", type=['xlsx'])
-
 
         if uploaded_file is not None:
             try:
@@ -138,7 +164,7 @@ if st.sidebar.checkbox("Login"):
 
             from sklearn.model_selection import train_test_split
 
-            df = pd.read_excel('./db/data_train_1.xlsx', engine='openpyxl', index_col=0)
+            df = pd.read_excel('D:/data_train_1.xlsx', engine='openpyxl', index_col=0)
 
             X = df.drop(columns=["PERFORMANCE LEVEL"])
 
@@ -193,13 +219,17 @@ if st.sidebar.checkbox("Login"):
             st.dataframe(df_rest)
 
     else:
+        
         st.sidebar.error("Invalid username or password")
 
 try:
     container.write("")
-    image = Image.open('./image/BNI_Hactics_Horizontal-removebg-preview.png')
+    image = Image.open('D:\BNI_Hactics_Horizontal-removebg-preview.png')
 
     st.image(image)
     #st_lottie(lottie_analytic, height=300, key="analytic")
 except:
     pass
+
+
+
