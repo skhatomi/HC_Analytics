@@ -224,7 +224,7 @@ if st.sidebar.button("Login"):
 
 try:
     container.write("")
-    image = Image.open('./db/BNI_Hactics_Horizontal-removebg-preview.png')
+    image = Image.open('./image/BNI_Hactics_Horizontal-removebg-preview.png')
 
     st.image(image)
     #st_lottie(lottie_analytic, height=300, key="analytic")
