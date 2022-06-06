@@ -102,7 +102,7 @@ if st.sidebar.button("Login"):
         del container
         st.sidebar.success("Logged in as {}".format(username))
 
-        dfx = pd.read_excel('D:/data_train.xlsx', engine='openpyxl', index_col=0)
+        dfx = pd.read_excel('./db/data_train.xlsx', engine='openpyxl', index_col=0)
 
         st.header('Data ODP saat ini')
         
@@ -164,7 +164,7 @@ if st.sidebar.button("Login"):
 
             from sklearn.model_selection import train_test_split
 
-            df = pd.read_excel('D:/data_train_1.xlsx', engine='openpyxl', index_col=0)
+            df = pd.read_excel('./db/data_train_1.xlsx', engine='openpyxl', index_col=0)
 
             X = df.drop(columns=["PERFORMANCE LEVEL"])
 
@@ -224,7 +224,7 @@ if st.sidebar.button("Login"):
 
 try:
     container.write("")
-    image = Image.open('D:\BNI_Hactics_Horizontal-removebg-preview.png')
+    image = Image.open('./db/BNI_Hactics_Horizontal-removebg-preview.png')
 
     st.image(image)
     #st_lottie(lottie_analytic, height=300, key="analytic")
