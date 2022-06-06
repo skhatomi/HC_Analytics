@@ -88,7 +88,7 @@ div.stButton > button:hover {
     }
 </style>""", unsafe_allow_html=True)
 
-if st.sidebar.button("Login"):
+if st.sidebar.checkbox("Login"):
     #st.balloons()
 
     if username == 'user' and password == 'bni46':
