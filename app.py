@@ -203,7 +203,7 @@ dfy = dfy[dfy['DOMISILI'].isin(dom)]
 fig = px.bar(dfy, x="DOMISILI", y=["TIER 1", "TIER 2", "TIER 3", "TIER 4", "TIER 5"], title="Domisili")
 fig.update_layout(
     autosize=False,
-    width=1130,
+    width=1110,
     height=400,
     margin=dict(
         l=0,
