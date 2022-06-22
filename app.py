@@ -158,8 +158,8 @@ dfy = dfy.astype({'TIER 2': 'int64'})
 dfy = dfy.astype({'TIER 3': 'int64'})
 dfy = dfy.astype({'TIER 4': 'int64'})
 dfy = dfy.astype({'TIER 5': 'int64'})
-st.write('Sebaran Universitas')
-dom = st.multiselect(dfy['UNIVERSITAS'].unique(), default = ['UNIVERSITAS TELKOM',
+st.write('\n')
+dom = st.multiselect('Sebaran Universitas', dfy['UNIVERSITAS'].unique(), default = ['UNIVERSITAS TELKOM',
                                                                             'UNIVERSITAS SUMATERA UTARA',
                                                                             'UNIVERSITAS SRIWIJAYA',
                                                                             'UNIVERSITAS SEBELAS MARET',
