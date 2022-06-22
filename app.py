@@ -97,6 +97,7 @@ df_rest = df_rest[df_rest['PERFORMANCE LEVEL'].isin(tier) &
 
 st.write('Data Calon Pegawai')
 st.dataframe(df_rest)
+st.write('\n')
 
 col1, col2, col3 = st.columns(3)
 
