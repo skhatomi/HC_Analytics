@@ -147,6 +147,8 @@ fig.update_layout(
     ),
     paper_bgcolor="LightSteelBlue",
 )
+fig.update_yaxes(
+    title = 'JUMLAH PELAMAR')
 st.plotly_chart(fig)
 
 dfy = df_test.groupby(['UNIVERSITAS','PERFORMANCE LEVEL']).size().reset_index(name='TOTAL')
@@ -191,6 +193,8 @@ fig.update_layout(
     ),
     paper_bgcolor="LightSteelBlue",
 )
+fig.update_xaxes(
+    title = 'JUMLAH PELAMAR')
 st.plotly_chart(fig)
 
 dfy = df_test.groupby(['JURUSAN','PERFORMANCE LEVEL']).size().reset_index(name='TOTAL')
@@ -224,4 +228,6 @@ fig.update_layout(
         pad=4
     )
 )
+fig.update_xaxes(
+    title = 'JUMLAH PELAMAR')
 st.plotly_chart(fig)
