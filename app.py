@@ -10,7 +10,7 @@ from plotly.graph_objs import Layout
 import plotly.express as px
 
 #logo tab
-image = Image.open('D:/logo-bni.png', mode='r')
+image = Image.open('./image/logo-bni.png', mode='r')
 
 st.set_page_config(
      page_title="BNI-HACTICS",
@@ -62,7 +62,7 @@ def set_bg_hack(main_bg):
          unsafe_allow_html=True
      )
 
-set_bg_hack('D:/background1.jpg')
+set_bg_hack('./image/background1.jpg')
     
 # container = st.container()
 
@@ -142,7 +142,7 @@ header("TALENT ACQUISITION")
 # #upload
 # st.header('Prediksi tingkat kinerja calon ODP')
 
-df_test = pd.read_excel(r'D:/HASIL.xlsx', engine='openpyxl', index_col=0)
+df_test = pd.read_excel('./db/HASIL.xlsx', engine='openpyxl', index_col=0)
 df_rest = df_test
 
 # df_rest = df_rest.reset_index(drop = True)
