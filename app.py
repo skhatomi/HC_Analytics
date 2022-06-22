@@ -145,8 +145,7 @@ fig.update_layout(
         b=0,
         t=0,
         pad=4
-    ),
-    paper_bgcolor="LightSteelBlue",
+    )
 )
 fig.update_yaxes(
     title = 'JUMLAH PELAMAR')
@@ -192,8 +191,7 @@ fig.update_layout(
         b=0,
         t=0,
         pad=4
-    ),
-    paper_bgcolor="LightSteelBlue",
+    )
 )
 fig.update_xaxes(
     title = 'JUMLAH PELAMAR')
