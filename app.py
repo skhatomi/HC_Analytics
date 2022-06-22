@@ -223,30 +223,5 @@ fig.update_layout(
         t=0,
         pad=4
     )
-
+)
 st.plotly_chart(fig)
-
-
-
-
-
-
-
-
-
-
-
-#     else:
-#         st.sidebar.error("Invalid username or password")
-
-# try:
-#     container.write("")
-#     image = Image.open('D:\BNI_Hactics_Horizontal-removebg-preview.png')
-
-#     st.image(image)
-
-# except:
-#     pass
-
-
-
