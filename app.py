@@ -63,84 +63,8 @@ def set_bg_hack(main_bg):
      )
 
 set_bg_hack('./image/background1.jpg')
-    
-# container = st.container()
-
-# username = st.sidebar.text_input("Username")
-# password = st.sidebar.text_input("Password", type = 'password')
-
-# st.markdown("""
-# <style>
-# div.stButton > button:first-child {
-#     background-color: #0099ff;
-#     color:#ffffff;
-# }
-# div.stButton > button:hover {
-#     background-color: #fc6608;
-#     color:#FFFFFF;
-#     }
-# </style>""", unsafe_allow_html=True)
-
-
-# if st.sidebar.checkbox("Login"):
-#     #st.balloons()
-
-#     if username == '' and password == '':
 
 header("TALENT ACQUISITION")
-
-# del container
-# st.sidebar.success("Logged in as {}".format(username))
-####
-
-# dfx = pd.read_excel('D:/data_train.xlsx', engine='openpyxl', index_col=0)
-
-# st.header('Data ODP saat ini')
-
-# #Universitas
-# _, col2, _ = st.columns([2, 2, 1])
-
-# with col2:
-#     st.write('Top 10 Univerisity')
-
-# dfp2 = dfx["UNIVERSITAS"].value_counts().rename_axis('UNIVERSITAS').reset_index(name='Total')
-# dfp2 = dfp2.sort_values('Total',ascending = False).head(10)
-# labels2 = dfp2["UNIVERSITAS"]
-# values2 = dfp2["Total"]
-
-# layout = Layout(
-# paper_bgcolor='rgba(0,0,0,0)',
-# plot_bgcolor='rgba(0,0,0,0)'
-# )
-
-# fig2 = go.Figure(data=[go.Pie(labels=labels2, values=values2, hole=.3)], layout =layout)
-# fig2.update_traces(textinfo='value')
-# st.plotly_chart(fig2, use_container_width = True)
-
-# st.markdown("""---""")
-# #Jurusan
-# _, col3, _ = st.columns([2, 2, 1])
-# with col3:
-#     st.write('Top 10 Major')
-# dfp2 = dfx["JURUSAN"].value_counts().rename_axis('JURUSAN').reset_index(name='Total')
-# dfp2 = dfp2.sort_values('Total',ascending = False).head(10)        
-# labels2 = dfp2["JURUSAN"]
-# values2 = dfp2["Total"]
-
-# fig2 = go.Figure(data=[go.Pie(labels=labels2, values=values2, hole=.3)], layout =layout)
-# fig2.update_traces(textinfo='value')
-# st.plotly_chart(fig2, use_container_width = True)
-
-# st.markdown("""---""")
-# #Usia
-# st.write("Rata-rata usia: ", str(round(sum(dfx["USIA"])/len(dfx), 2)), "Tahun")
-
-# #IPK
-# st.write("Rata-rata IPK: ", str(round(sum(dfx["IPK"])/len(dfx), 2)))
-
-# st.markdown("""---""")
-# #upload
-# st.header('Prediksi tingkat kinerja calon ODP')
 
 df_test = pd.read_excel('./db/HASIL.xlsx', engine='openpyxl', index_col=0)
 df_rest = df_test
@@ -279,7 +203,7 @@ dfy = dfy[dfy['DOMISILI'].isin(dom)]
 fig = px.bar(dfy, x="DOMISILI", y=["TIER 1", "TIER 2", "TIER 3", "TIER 4", "TIER 5"], title="Domisili")
 fig.update_layout(
     autosize=False,
-    width=1430,
+    width=1000,
     height=400,
     margin=dict(
         l=0,
