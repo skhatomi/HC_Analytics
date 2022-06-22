@@ -101,12 +101,12 @@ st.dataframe(df_rest)
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.write('total')
+    st.write('Data Universitas')
     dfz = df_rest.groupby(['UNIVERSITAS']).size().reset_index(name='TOTAL')
     st.dataframe(dfz)
 
 with col2:
-    st.write('total')
+    st.write('Data Domisili')
     dfzz = df_rest.groupby(['DOMISILI']).size().reset_index(name='TOTAL')
     st.dataframe(dfzz)
 
