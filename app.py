@@ -69,74 +69,6 @@ header("TALENT ACQUISITION")
 df_test = pd.read_excel('./db/HASIL.xlsx', engine='openpyxl', index_col=0)
 df_rest = df_test
 
-# df_rest = df_rest.reset_index(drop = True)
-
-# df_test = df_test.drop(columns=["NAMA"])
-
-# from sklearn.model_selection import train_test_split
-
-# df = pd.read_excel('D:/data_train_1.xlsx', engine='openpyxl', index_col=0)
-
-# X = df.drop(columns=["PERFORMANCE LEVEL"])
-
-# y = df["PERFORMANCE LEVEL"]
-
-# #X_train,X_test,y_train,y_test = train_test_split(X,y,test_size =0.3,random_state=1)
-
-# from sklearn import preprocessing
-    
-# lab = preprocessing.LabelEncoder()
-# y_transformed = lab.fit_transform(y)
-# #y_test_tr = lab.fit_transform(y_test)
-
-# from sklearn import ensemble
-# gb_clf = ensemble.GradientBoostingClassifier(n_estimators=50)
-# gb_clf.fit(X,y_transformed)
-
-# #rf_clf = ensemble.RandomForestClassifier(n_estimators=100)
-# #rf_clf.fit(X, y_transformed)
-
-# a1 = pd.DataFrame(X.columns, columns = ['colname'])
-
-# dum1 = pd.get_dummies(df_test['DOMISILI'])
-# dum2 = pd.get_dummies(df_test['TINGKAT PENDIDIKAN'])
-# dum3 = pd.get_dummies(df_test['UNIVERSITAS'])
-# dum4 = pd.get_dummies(df_test['JURUSAN'])
-
-# df_test = pd.concat((df_test, dum1, dum2, dum3, dum4), axis=1)
-
-# df_test = df_test.drop(['DOMISILI', 'TINGKAT PENDIDIKAN', 'UNIVERSITAS', 'JURUSAN'], axis = 1)
-
-# b = pd.DataFrame(df_test.columns, columns = ['colname'])
-    
-# b2 = a1[~a1.colname.isin(b.colname)]
-# b2 = b2.reset_index(drop = True)
-
-# for i in range (len(b2)):
-#     df_test[b2['colname'][i]] = 0
-
-# df_test = df_test.reset_index(drop = True)
-
-# result = gb_clf.predict(df_test)
-
-# df_result = pd.DataFrame(result, columns = ['PERFORMANCE LEVEL'])
-
-# df_result = df_result.replace({0: 'TIER 1', 1: 'TIER 2', 2: 'TIER 3', 3: 'TIER 4', 4: 'TIER 5'})
-
-# df_rest = pd.concat((df_result, df_rest), axis=1)
-
-# df_rest = df_rest.sort_values('PERFORMANCE LEVEL',ascending = True)
-
-#df_rest.to_excel(r'D:/HASIL.xlsx')
-
-
-# makes = df_rest['JURUSAN'].drop_duplicates()
-# make_choice = st.sidebar.selectbox('Select your vehicle:', makes)
-
-# df_rest.loc[df_rest[JURUSAN]=make_choice]
-
-# st.dataframe(df_rest) 
-
 tier = st.sidebar.multiselect('Filter Tier', df_rest['PERFORMANCE LEVEL'].unique(), default = None)
 all_tier = st.sidebar.checkbox("Pilih Semua Tier", value = True)
 if all_tier:
@@ -187,6 +119,7 @@ with col3:
     except:
         st.write('Tidak ada data yang ditampilkan')
 
+st.markdown("""---""")
 dfy = df_test.groupby(['DOMISILI','PERFORMANCE LEVEL']).size().reset_index(name='TOTAL')
 dfy = dfy.pivot(index='DOMISILI', columns='PERFORMANCE LEVEL', values='TOTAL')
 dfy = dfy.fillna(0)
@@ -198,7 +131,7 @@ dfy = dfy.astype({'TIER 4': 'int64'})
 dfy = dfy.astype({'TIER 5': 'int64'})
 # st.write('Domisili')
 # st.dataframe(dfy)
-dom = st.multiselect('filter data', dfy['DOMISILI'].unique(), default = dfy['DOMISILI'].unique())
+dom = st.multiselect('Sebaran Provinsi', dfy['DOMISILI'].unique(), default = dfy['DOMISILI'].unique())
 dfy = dfy[dfy['DOMISILI'].isin(dom)]
 fig = px.bar(dfy, x="DOMISILI", y=["TIER 1", "TIER 2", "TIER 3", "TIER 4", "TIER 5"], title="Domisili")
 fig.update_layout(
@@ -226,7 +159,7 @@ dfy = dfy.astype({'TIER 3': 'int64'})
 dfy = dfy.astype({'TIER 4': 'int64'})
 dfy = dfy.astype({'TIER 5': 'int64'})
 st.write('Universitas')
-dom = st.multiselect('filter data', dfy['UNIVERSITAS'].unique(), default = ['UNIVERSITAS TELKOM',
+dom = st.multiselect('Sebaran Universitas', dfy['UNIVERSITAS'].unique(), default = ['UNIVERSITAS TELKOM',
                                                                             'UNIVERSITAS SUMATERA UTARA',
                                                                             'UNIVERSITAS SRIWIJAYA',
                                                                             'UNIVERSITAS SEBELAS MARET',
