@@ -135,6 +135,7 @@ dom = st.multiselect('Sebaran Provinsi', dfy['DOMISILI'].unique(), default = dfy
 dfy = dfy[dfy['DOMISILI'].isin(dom)]
 fig = px.bar(dfy, x="DOMISILI", y=["TIER 1", "TIER 2", "TIER 3", "TIER 4", "TIER 5"], title="Domisili")
 fig.update_layout(
+    paper_bgcolor='rgba(0,0,0,0)',
     autosize=False,
     width=1111,
     height=400,
@@ -181,6 +182,7 @@ if all_u:
 dfy = dfy[dfy['UNIVERSITAS'].isin(dom)]
 fig = px.bar(dfy, y="UNIVERSITAS", x=["TIER 1", "TIER 2", "TIER 3", "TIER 4", "TIER 5"], title="Domisili")
 fig.update_layout(
+    paper_bgcolor='rgba(0,0,0,0)',
     autosize=False,
     width=1111,
     height=400,
