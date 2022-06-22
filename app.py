@@ -202,9 +202,8 @@ dfy = dfy.astype({'TIER 2': 'int64'})
 dfy = dfy.astype({'TIER 3': 'int64'})
 dfy = dfy.astype({'TIER 4': 'int64'})
 dfy = dfy.astype({'TIER 5': 'int64'})
-# st.write('Domisili')
-# st.dataframe(dfy)
-dom = st.multiselect('filter data', dfy['JURUSAN'].unique(), default = ['AKUNTANSI',
+st.write('\n')
+dom = st.multiselect('Sebaran Jurusan', dfy['JURUSAN'].unique(), default = ['AKUNTANSI',
                                                                         'HUKUM',
                                                                         'MANAJEMEN',
                                                                         'TEKNOLOGI INFORMASI DAN INFORMATIKA'])
@@ -224,19 +223,8 @@ fig.update_layout(
         t=0,
         pad=4
     )
-)
-# fig.update_xaxes(
-#     gridcolor = '#000000',
-#     linecolor = '#000000')
-# fig.update_yaxes(
-#     linecolor = '#000000')
+
 st.plotly_chart(fig)
-
-
-# dom = st.multiselect('filter data', dfy['UNIVERSITAS'].unique(), default = None)
-# dfy = dfy[dfy['UNIVERSITAS'].isin(dom)]
-# fig = px.bar(dfy, x="UNIVERSITAS", y=["TIER 1", "TIER 2", "TIER 3", "TIER 4", "TIER 5"], title="Universitas")
-# st.plotly_chart(fig)
 
 
 
