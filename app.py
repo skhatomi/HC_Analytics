@@ -133,7 +133,7 @@ dfy = dfy.astype({'TIER 4': 'int64'})
 dfy = dfy.astype({'TIER 5': 'int64'})
 # st.write('Domisili')
 # st.dataframe(dfy)
-dom = st.multiselect('Sebaran Provinsi', dfy['DOMISILI'].unique(), default = dfy['DOMISILI'].unique())
+dom = st.multiselect('Sebaran Kota', dfy['DOMISILI'].unique(), default = dfy['DOMISILI'].unique())
 dfy = dfy[dfy['DOMISILI'].isin(dom)]
 fig = px.bar(dfy, x="DOMISILI", y=["TIER 1", "TIER 2", "TIER 3", "TIER 4", "TIER 5"], title="Domisili")
 fig.update_layout(
