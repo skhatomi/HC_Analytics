@@ -36,7 +36,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 #header
 def header(url):
-     st.markdown(f'<center><p style="background-color:#FC6608;color:#000000;font-size:60px;border-radius:30px 0px 30px 0px;">{url}</p></center>', unsafe_allow_html=True)
+     st.markdown(f'<center><p style="background-color:#FC6608;color:#000000;font-size:30px;border-radius:30px 0px 30px 0px;">{url}</p></center>', unsafe_allow_html=True)
 
 #background
 def set_bg_hack(main_bg):
