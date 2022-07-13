@@ -73,12 +73,12 @@ if st.sidebar.checkbox("Login"):
 
     if username == '' and password == '':
 
-          header("TALENT ACQUISITION")
+        header("TALENT ACQUISITION")
           
-          del container
+        del container
 
-          df_test = pd.read_excel('./db/HASIL.xlsx', engine='openpyxl', index_col=0)
-          df_s = df_test.copy()
+        df_test = pd.read_excel('./db/HASIL.xlsx', engine='openpyxl', index_col=0)
+        df_s = df_test.copy()
 
         df_test.columns = df_test.columns.str.replace(
             'PERFORMANCE LEVEL', 'PREDIKSI PERFORMANCE LEVEL')
