@@ -71,7 +71,7 @@ set_bg_hack('./image/background1.jpg')
 if st.sidebar.checkbox("Login"):
     # st.balloons()
 
-    if username == '' and password == '':
+    if username == 'user' and password == 'bni46':
 
         header("TALENT ACQUISITION")
           
