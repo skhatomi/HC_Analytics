@@ -13,10 +13,10 @@ import plotly.express as px
 image = Image.open('./image/logo-bni.png', mode='r')
 
 st.set_page_config(
-     page_title="BNI-HACTICS",
-     page_icon=image,
-     layout="wide",
-     initial_sidebar_state="expanded",
+    page_title="BNI-HACTICS",
+    page_icon=image,
+    layout="wide",
+    initial_sidebar_state="expanded",
  )
 
 #hide streamlit label
@@ -77,8 +77,14 @@ if st.sidebar.checkbox("Login"):
           
         del container
 
-        df_test = pd.read_excel('./db/HASIL.xlsx', engine='openpyxl', index_col=0)
-        df_s = df_test.copy()
+        uploaded_file = st.file_uploader(label = "Choose a file", type=['xlsx'])
+        global df_test
+        if uploaded_file is not None:
+            df_test = pd.read_excel(uploaded_file,engine='openpyxl')
+            df_s = df_test.copy()
+        else:
+            df_test = pd.read_excel('./db/HASIL.xlsx', engine='openpyxl', index_col=0)
+            df_s = df_test.copy()
 
         df_test.columns = df_test.columns.str.replace(
             'PERFORMANCE LEVEL', 'PREDIKSI PERFORMANCE LEVEL')
