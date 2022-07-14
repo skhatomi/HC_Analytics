@@ -84,6 +84,7 @@ if st.sidebar.checkbox("Login"):
             df_s = df_test.copy()
         else:
             df_test = pd.read_excel('./db/HASIL.xlsx', engine='openpyxl', index_col=0)
+            df_test = df_test.drop(['PERFORMANCE LEVEL'], axis = 1)
             df_s = df_test.copy()
 
         df_test.columns = df_test.columns.str.replace(
@@ -390,7 +391,7 @@ if st.sidebar.checkbox("Login"):
                           df_s['DOMISILI'].isin(dom) &
                           df_s['IPK'].between(slide[0], slide[1]) &
                           df_s['USIA'].between(age[0], age[1])]
-        st.dataframe(df_s.sort_values('SCORE', ascending = False).reset_index(drop=True).drop(['PERFORMANCE LEVEL'], axis = 1))
+        st.dataframe(df_s.sort_values('SCORE', ascending = False).reset_index(drop=True))
           
         st.markdown("""---""")
 
