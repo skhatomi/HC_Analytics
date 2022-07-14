@@ -85,6 +85,7 @@ if st.sidebar.checkbox("Login"):
         else:
             df_test = pd.read_excel('./db/HASIL.xlsx', engine='openpyxl', index_col=0)
             df_test = df_test.drop(['PERFORMANCE LEVEL'], axis = 1)
+            df_test = df_test.drop(df_test.columns[0], axis = 1)
             df_s = df_test.copy()
 
         df_test.columns = df_test.columns.str.replace(
