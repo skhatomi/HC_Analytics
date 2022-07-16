@@ -13,7 +13,7 @@ import gspread as gs
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-gc = gs.service_account(filename = 'cred.json')
+gc = gs.service_account(filename = './cred.json')
 
 sh1 = gc.open('Akreditasi Universitas').worksheet("SCORING TINGKAT PENDIDIKAN")
 
@@ -32,7 +32,7 @@ def app():
     global df_test
     uploaded_file = st.file_uploader(label = "Choose a file", type=['xlsx'])
 
-    df_test = pd.read_excel(r'D:/DATA_1.xlsx', engine='openpyxl', index_col=0)
+    df_test = pd.read_excel(r'./db/DATA_1.xlsx', engine='openpyxl', index_col=0)
     df_s = df_test.copy()
     df_s = df_s.drop(['PERFORMANCE LEVEL'], axis = 1)
 
