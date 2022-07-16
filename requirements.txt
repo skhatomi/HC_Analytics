@@ -34,12 +34,6 @@ plotly==5.8.0
 prometheus-client==0.14.1
 prompt-toolkit==3.0.29
 protobuf==3.19.4
-pyarrow==6.0.1
-pycparser==2.21
-pydeck==0.6.2
-Pygments==2.11.2
-Pympler==1.0.1
-pyparsing==3.0.7
 pywin32==303
 pywinpty==1.1.6
 pyzmq==22.3.0
