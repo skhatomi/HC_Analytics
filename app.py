@@ -5,7 +5,7 @@ from PIL import Image
 import base64
 
 # logo tab
-image = Image.open('D:/logo-bni.png', mode='r')
+image = Image.open('./image/logo-bni.png', mode='r')
 
 st.set_page_config(
      page_title="HC-Analytics",
@@ -43,7 +43,7 @@ def set_bg_hack(main_bg):
          unsafe_allow_html=True
      )
 
-set_bg_hack('D:/background1.jpg')
+set_bg_hack('./image/background1.jpg')
 
 # hide streamlit label
 hide_streamlit_style = """
@@ -92,7 +92,7 @@ def main():
 
     try:
         container.write("")
-        image = Image.open('D:\BNI_Hactics_Horizontal-removebg-preview.png')
+        image = Image.open('./image/BNI_Hactics_Horizontal-removebg-preview.png')
 
         st.image(image)
     except:
