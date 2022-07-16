@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "alert-snowfall-348614",
+  "private_key_id": "a6b07c62e1912044e4316b0461a982020679adbd",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDCTx74AoeHWn2I\ncw95Rpf60W+1Mdb2flEvOPrtZoHzNX5Gh7tg5iP1dBEFXMqAcS43GHrb8FrE9OYx\nwXMEU4gTXBujI3qY/iY4qmj/TrHbsV7Py4tHqQqbUifG8WZ3vSSmXeOUO/EW+rOE\nU6stuTROND19MUJmt6tt92lKvsYQJYoClzyDJMRqsxG744AZatkr9Mbj16mLE0qg\nCmXPQ/xbSE9PQtAXSEaPwRWiVglhMi/0EaEChHquuEQ5+g+QygbJ0CsWN1g6EJo2\nwK1VqZ12wRtJsutJhdPNWfmkBxhjH9zDay8Zsg/T5V0PsSWVZJC/NSXESwIvRgWj\nlod5wH/LAgMBAAECggEAAXS6LL//h9YurMORqi9UTX3B1L2H75tT/Iv0iodHv9pt\nsEybEXm8j/SingPiMf5U1D/boz6wLABaohKq8HaS6fPv8oGiw+TbDlHJJA2+sCU8\nvNlvq4XdGPuPilAnLlWB/Uu28w14yaQT+v5/gMsiZyEKXcSRy5cZcqxsbDIHU8M0\nUnXM55n/XT7i/wpy4K8qPO5utnZekFEfqPNMfB14q4l1M+RlkhuZ4c2M6wDQtk+7\njJwE/4oXlk+3/H6bAR7e+ToVBJhZ8mNZSL9heatOl3jl6cF0eGgmTw/UjlJiJrDD\n+VPLT0NnTsFwjVRU5vU8U+eNelIX4Z2jKdXv31pYTQKBgQDxtxVVlZBi3zhZOi19\nQxzpyInZi6mQfCKkxEv5d59JXZtHdhiGTjs9uIVVt9Cwy6fd5nY8tJTQFxH8Vmj3\nITLxX8g1yXot+ZlzvBFjiacqytXXl2ayZ9W7zqYtXTOvzNO4Q5fzPiGvv+Dj5A5O\nPnoJTVGJgLE4S1wUkFdTijSTbwKBgQDNytRDzzVfJYtZ2jaX78oCjVTYZeCh9C5c\nULACYBTkgs2/ifxurygSy7Alp7V9+lSpOzkRpW6KBgt7peSK7ntxQzOoY4VwBQfy\ne/n63fWTvaYaD36iVSHssMTA6i0Wesk1UalFglih+mGzo+VMjrxuMzVLOrOQBxer\n3ejHzJR7ZQKBgQCJzZoRH+KgK6ihXgSfHEr4kYbdir0SDWNm0i6KPAOIvSAQvqg+\nsY0eo/sIInKMyJ6caI5SD5WjiPONC+ptsfSsHbIzz/ijC2DL1ZWITOsL/3Woor0+\nyunUV3zv8enMuRafP5H6cBqeauMYqWTqgL3sXbM1lDP05ynI432Vt/4/awKBgQCU\nAVJUSoxaF8h3IOeusniZCUiCMhMyp0lIf4d2zd940VJkdTsl57dsfS38hveS2R1W\ncQ+ET3SGs/5COXd7LDV/qhNXAeyQOi4TCXMqJ8RdM0Jo78flvFCfyCpZjJJM3pYj\nUM3q/en85PSrnC5ntyhyIUYtCtTluxQdOYYXXF1VuQKBgQDNSAcaIgnoUahFmYki\nad7XaCfs3hT3TgpQPAzOxWupphgGUZ328EBAFmzeNthui1wOvm00lR7GRPLAzp9r\nkbW63pDILTJ/ID2XB3bJwsBCELqmTMyqUXexcaHTQuVE2E9cAn7JybZaXXIDpG/e\ndOn/RVwsBzuxC6hfrWpIJuBsrQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "gspreadbni@alert-snowfall-348614.iam.gserviceaccount.com",
+  "client_id": "105971306961959230255",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gspreadbni%40alert-snowfall-348614.iam.gserviceaccount.com"
+}
