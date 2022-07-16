@@ -38,7 +38,7 @@ def app():
         df_s = df_test.copy()
     
     else:
-        df_test = pd.read_excel(r'D:/HASIL.xlsx', engine='openpyxl', index_col=0)
+        df_test = pd.read_excel(r'./db/DATA_1.xlsx', engine='openpyxl', index_col=0)
         df_k = df_test.copy()
         df_test = df_test.drop(['PERFORMANCE LEVEL'], axis = 1)
         df_s = df_test.copy()
