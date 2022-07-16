@@ -31,7 +31,6 @@ parso==0.7.1
 pickleshare==0.7.5
 Pillow==8.4.0
 plotly==5.8.0
-pywin32==303
 pywinpty==1.1.6
 pyzmq==22.3.0
 requests==2.27.1
