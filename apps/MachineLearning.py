@@ -8,7 +8,7 @@ import plotly.graph_objects as go
 import plotly.figure_factory as ff
 from plotly.graph_objs import Layout
 import plotly.express as px
-import geopandas as gpd
+#import geopandas as gpd
 import gspread as gs
 import seaborn as sns
 import matplotlib.pyplot as plt
